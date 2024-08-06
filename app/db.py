@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 
 # engine = create_engine("postgresql://postgres:likkimerr@localhost/contacts")
 engine = create_engine(
-    "postgresql://postgres.yuuololhrcglehfuyalc:likkimerr@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
+    "postgresql://postgres.yuuololhrcglehfuyalc:s_K65dMhv_i993d@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
 )
 
 
