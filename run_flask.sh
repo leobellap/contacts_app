@@ -1,0 +1,1 @@
+cd app && flask --app main run --debug

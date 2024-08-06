@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .inpt {
+    @apply text-ph_size focus:border-focus_blue border px-[15px] py-[5px] focus:outline-none;
+  }
+
+  .btn {
+    @apply active:bg-active_blue hover:border-hover_blue text-btn_size w-fit border px-[15px] py-[5px];
+  }
+
+  .black_btn {
+    @apply text-btn_size w-fit text-slate-600 underline hover:text-black active:font-bold;
+  }
+}

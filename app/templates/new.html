@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/output.css" />
+    <title>Contact App</title>
+  </head>
+  <body class="my-[40px] font-mono">
+    <div class="mx-auto flex w-fit flex-col justify-center gap-[20px]">
+      <div>
+        <h1 class="text-[42px] text-blue-700"><a href="/">Contacts.app</a></h1>
+        <h2 class="text-[24px] text-slate-500">A Demo Contacts Application</h2>
+        <hr />
+      </div>
+
+      <form action="/created" class="flex flex-col gap-[20px]" method="post">
+        <div class="flex flex-col gap-[10px]">
+          <input
+            class="inpt"
+            type="text"
+            placeholder="name"
+            name="name"
+            required
+          />
+          <input
+            class="inpt"
+            type="text"
+            placeholder="phone number"
+            name="phone"
+            required
+          />
+          <input
+            class="inpt"
+            type="email"
+            placeholder="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="flex gap-[10px]">
+          <input class="btn" type="submit" value="submit" />
+          <a href="/" class="btn"><button>return</button></a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
