@@ -10,5 +10,10 @@ Some features:
 2. Delete contact's data :scissors:
 3. Search and display contact's data :mag_right:
 
-Temporary link:
+Temporary link for the project:
 <https://contacts-app-4b6j.onrender.com/>
+
+Services used for deploying:
+
+1. Cloud website hosting sevice: <https://render.com>
+2. Cloud Postgres DB service: <https://supabase.com>
