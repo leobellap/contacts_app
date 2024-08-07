@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine, text
 
-
-# engine = create_engine("postgresql://postgres:likkimerr@localhost/contacts")
-engine = create_engine(contactapp_db_conn_string)
+conn_string = "postgresql://postgres.yuuololhrcglehfuyalc:s_K65dMhv_i993d@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
+engine = create_engine(conn_string)
 
 
 def save_contact(contact_data):
