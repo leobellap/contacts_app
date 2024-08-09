@@ -1,26 +1,20 @@
+{% import "_macros.html" as macros %}
+
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://unpkg.com/htmx.org@1.9.2"
-      integrity="sha384-L6OqL9pRWyyFU3+/bjdSri+iIphTN/
-    bvYyM37tICVyOJkWZLpP2vGn6VUEXgzg6h"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/static/output.css" />
-    <title>Contact App</title>
-  </head>
+  {{ macros.head() }}
 
-  <body class="mx-[20px] my-[40px] font-mono">
-    <div class="mx-auto flex w-fit flex-col justify-center gap-[20px]">
+  <body class="mx-[20px] my-[40px] font-mono" hx-target="this" id="base">
+    <div class="mx-auto flex w-fit flex-col gap-[20px]">
       <div>
-        <h1
-          class="text-text_blue text-[42px] hover:underline active:text-black"
-        >
-          <a href="/">Contacts.app</a>
-        </h1>
+        <a href="/" hx-get="{{url_for('index')}}">
+          <h1
+            class="text-text_blue text-[42px] hover:underline active:text-black"
+          >
+            Contacts.app
+          </h1>
+        </a>
+
         <h2 class="text-[24px] text-slate-500">A Demo Contacts Application</h2>
         <hr />
       </div>

@@ -615,14 +615,14 @@ video {
   margin-right: 20px;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-\[40px\] {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .block {
@@ -648,10 +648,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .gap-\[10px\] {

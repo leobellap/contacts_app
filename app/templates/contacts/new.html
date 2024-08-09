@@ -1,5 +1,11 @@
-{% extends 'base.html' %} {% block content %}
-<form action="/created" class="flex flex-col gap-[20px]" method="post">
+{% block content %}
+<form
+  action="/created"
+  class="flex flex-col gap-[20px]"
+  method="post"
+  hx-post="{{url_for('created')}}"
+  hx-target="this"
+>
   <div class="flex flex-col gap-[10px]">
     <input class="inpt" type="text" placeholder="name" name="name" required />
     <input
@@ -20,7 +26,9 @@
 
   <div class="flex gap-[10px]">
     <input class="btn" type="submit" value="submit" />
-    <a href="/" class="btn"><button type="button">return</button></a>
+    <a href="/" class="btn" hx-get="{{url_for('index')}}" hx-target="#base"
+      ><button type="button">return</button></a
+    >
   </div>
 </form>
 {% endblock %}

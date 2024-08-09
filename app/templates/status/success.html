@@ -1,7 +1,10 @@
-{% extends 'base.html' %} {% block content %}
-<h1 class="border px-[15px] py-[5px] text-[16px]">Operation successful.</h1>
+{% block content %}
+<div class="flex flex-col gap-[10px]" hx-target="#base">
+  <h1 class="border px-[15px] py-[5px] text-[16px]">Operation successful.</h1>
 
-<a href="/">
-  <button class="btn">return</button>
-</a>
+  <a href="/" hx-get="{{url_for('index')}}">
+    <button class="btn">return</button>
+  </a>
+</div>
+
 {% endblock %}

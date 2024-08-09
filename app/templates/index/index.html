@@ -1,20 +1,25 @@
 {% extends 'base.html' %} {% block content %}
-<div class="flex flex-col gap-[10px]">
+<div class="flex flex-col gap-[10px]" hx-target="this">
   <div>
-    <form action="/search" method="post" class="flex flex-row gap-[10px]">
+    <form
+      action="/search"
+      method="post"
+      class="flex flex-row gap-[10px]"
+      hx-post="{{url_for('search_user')}}"
+    >
       <input class="inpt" type="text" name="name" placeholder="name" required />
       <input class="btn" type="submit" value="search" />
     </form>
   </div>
 
   <div class="flex gap-[15px]">
-    <button class="black_btn">
-      <a href="/new" class="w-fit">add contact</a>
-    </button>
+    <a href="/new" class="flex" hx-get="{{url_for('new')}}">
+      <button class="black_btn">add contact</button>
+    </a>
 
-    <button class="black_btn">
-      <a href="/all" class="w-fit">show all</a>
-    </button>
+    <a href="/all" class="flex" hx-get="{{url_for('all')}}" hx-swap="outerHTML">
+      <button class="black_btn">Show all</button>
+    </a>
   </div>
 </div>
 

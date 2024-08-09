@@ -44,6 +44,13 @@ def delete_contact():
     return render_template("status/success.html")
 
 
+@app.route("/delete_all", methods=["post"])
+def delete_contact_all():
+    data = request.form
+    delete(data)
+    return render_template("status/success_all.html")
+
+
 @app.route("/all")
 def all():
     data = show_all()
