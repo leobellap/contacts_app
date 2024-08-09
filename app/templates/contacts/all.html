@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %} {% for contact in contacts_data %}
+
+<div class="flex flex-col gap-[10px]">
+  <div class="flex flex-col gap-[10px] border px-[10px] py-[5px]">
+    <div class="flex flex-col">
+      <div class="flex gap-[5px]">
+        <h2 class="text-[16px] font-bold">{{contact['name']}}</h2>
+      </div>
+      <hr />
+    </div>
+
+    <div>
+      <p class="text-[12px]">{{contact['email']}}</p>
+      <p class="text-[12px]">{{contact['phone']}}</p>
+    </div>
+  </div>
+
+  <form action="/delete" method="post">
+    <input type="hidden" name="name" value="{{ contact.name }}" />
+    <input type="hidden" name="phone" value="{{ contact.phone }}" />
+    <input type="hidden" name="email" value="{{ contact.email }}" />
+    <button type="submit" class="btn hover:border-red-500 active:bg-red-100">
+      delete
+    </button>
+  </form>
+</div>
+
+{% endfor %} {% endblock %}

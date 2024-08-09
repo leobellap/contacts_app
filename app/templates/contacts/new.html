@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<form action="/created" class="flex flex-col gap-[20px]" method="post">
+  <div class="flex flex-col gap-[10px]">
+    <input class="inpt" type="text" placeholder="name" name="name" required />
+    <input
+      class="inpt"
+      type="text"
+      placeholder="phone number"
+      name="phone"
+      required
+    />
+    <input
+      class="inpt"
+      type="email"
+      placeholder="email"
+      name="email"
+      required
+    />
+  </div>
+
+  <div class="flex gap-[10px]">
+    <input class="btn" type="submit" value="submit" />
+    <a href="/" class="btn"><button type="button">return</button></a>
+  </div>
+</form>
+{% endblock %}

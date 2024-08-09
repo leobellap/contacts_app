@@ -8,7 +8,7 @@
   }
 
   .btn {
-    @apply active:bg-active_blue hover:border-hover_blue text-btn_size w-fit border px-[15px] py-[5px];
+    @apply active:bg-active_blue hover:border-hover_blue text-btn_size w-fit cursor-pointer border px-[15px] py-[5px];
   }
 
   .black_btn {

@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<div class="flex flex-col gap-[10px]">
+  <div class="flex flex-col gap-[10px] border px-[10px] py-[5px]">
+    <div class="flex flex-col">
+      <div class="flex gap-[5px]">
+        <h2 class="text-[16px] font-bold">{{contact_data['name']}}</h2>
+      </div>
+      <hr />
+    </div>
+
+    <div>
+      <p class="text-[12px]">{{contact_data['email']}}</p>
+      <p class="text-[12px]">{{contact_data['phone']}}</p>
+    </div>
+  </div>
+  <div class="flex gap-[10px]">
+    <a href="/" class="w-fit">
+      <button class="btn">return</button>
+    </a>
+
+    <form action="/delete" method="post">
+      <input type="hidden" name="name" value="{{ contact_data.name }}" />
+      <input type="hidden" name="phone" value="{{ contact_data.phone }}" />
+      <input type="hidden" name="email" value="{{ contact_data.email }}" />
+      <button type="submit" class="btn hover:border-red-500 active:bg-red-100">
+        delete
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}
