@@ -2,7 +2,7 @@
 
 ## A Demo Contacts Application
 
-This is a simple full-stack webapp, that allows you to store and manipulate personal data of your contacts. :blush:
+This is a simple full-stack web app, that allows you to store and manipulate personal data of your contacts. :blush:
 
 Some features:
 
@@ -10,7 +10,9 @@ Some features:
 2. Delete contact's data :scissors:
 3. Search and display contact's data :mag_right:
 
-Temporary link for the project:
+This project uses HTMX for SPA like web dev approach. :zap:
+
+Temporary link for the project (it may take some time to connect to the website, because of subscription free type of hosting):
 <https://contacts-app-4b6j.onrender.com/>
 
 Services used for deploying:
