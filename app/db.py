@@ -57,8 +57,4 @@ def show_all():
         query = text("SELECT * FROM users")
         result = conn.execute(query)
         contact = result.fetchall()
-        # if contact:
-        #     return {"name": contact[0], "phone": contact[1], "email": contact[2]}
-        # else:
-        #     return None
         return contact
