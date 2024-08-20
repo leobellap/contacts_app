@@ -6,6 +6,7 @@
       method="post"
       class="flex flex-row gap-[10px]"
       hx-post="{{url_for('search_user')}}"
+      hx-swap="transition:true"
     >
       <input class="inpt" type="text" name="name" placeholder="name" required />
       <input class="btn" type="submit" value="search" />
@@ -13,11 +14,21 @@
   </div>
 
   <div class="flex gap-[15px]">
-    <a href="/new" class="flex" hx-get="{{url_for('new')}}">
+    <a
+      href="/new"
+      class="flex"
+      hx-get="{{url_for('new')}}"
+      hx-swap="transition:true"
+    >
       <button class="black_btn">add contact</button>
     </a>
 
-    <a href="/all" class="flex" hx-get="{{url_for('all')}}" hx-swap="outerHTML">
+    <a
+      href="/all"
+      class="flex"
+      hx-get="{{url_for('all')}}"
+      hx-swap="transition:true"
+    >
       <button class="black_btn">show all</button>
     </a>
   </div>

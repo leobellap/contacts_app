@@ -5,6 +5,7 @@
   method="post"
   hx-post="{{url_for('created')}}"
   hx-target="this"
+  hx-swap="transition:true"
 >
   <div class="flex flex-col gap-[10px]">
     <input class="inpt" type="text" placeholder="name" name="name" required />
@@ -26,7 +27,12 @@
 
   <div class="flex gap-[10px]">
     <input class="btn" type="submit" value="submit" />
-    <a href="/" class="btn" hx-get="{{url_for('index')}}" hx-target="#base"
+    <a
+      href="/"
+      class="btn"
+      hx-get="{{url_for('index')}}"
+      hx-target="#base"
+      hx-swap="transition:true"
       ><button type="button">return</button></a
     >
   </div>
