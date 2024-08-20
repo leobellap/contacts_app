@@ -4,7 +4,12 @@
 <html lang="en" class="scroll-smooth">
   {{ macros.head() }}
 
-  <body class="mx-[20px] my-[40px] font-mono" hx-target="this" id="base">
+  <body
+    class="mx-[20px] my-[40px] font-mono selection:bg-yellow-200"
+    hx-target="this"
+    id="base"
+    hx-swap="transition:true"
+  >
     <div class="mx-auto flex w-fit flex-col gap-[20px]">
       <div>
         <a href="/" hx-get="{{url_for('index')}}">
